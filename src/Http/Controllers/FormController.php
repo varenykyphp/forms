@@ -9,12 +9,14 @@ use Illuminate\Support\Str;
 use Varenyky\Http\Controllers\BaseController;
 use VarenykyForm\Models\Form;
 use VarenykyForm\Repositories\FormRepository;
+use VarenykyForm\Repositories\FormFieldRepository;
 
 class FormController extends BaseController
 {
-    public function __construct(FormRepository $repository)
+    public function __construct(FormRepository $repository, FormFieldRepository $formFieldRepository)
     {
         $this->repository = $repository;
+        $this->formFieldRepository = $formFieldRepository;
     }
 
     public function index(): View

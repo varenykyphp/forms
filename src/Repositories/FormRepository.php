@@ -1,9 +1,9 @@
 <?php
 
-namespace VarenykyFrom\Repositories;
+namespace VarenykyForm\Repositories;
 
 use Varenyky\Repositories\Repository;
-use VarenykyFrom\Models\Form;
+use VarenykyForm\Models\Form;
 
 class FormRepository extends Repository
 {
