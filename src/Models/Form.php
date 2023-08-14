@@ -10,4 +10,9 @@ class Form extends Model
         'name',
         'slug'
     ];
+
+    public function formFields()
+    {
+        return $this->hasMany(FormField::class);
+    }
 }
