@@ -1,2 +1,2 @@
 # forms
-VarenykyPHP froms package
+VarenykyPHP forms package
