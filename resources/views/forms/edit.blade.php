@@ -53,13 +53,16 @@
                         {{-- form_fields template --}}
                         <div id="fieldTemplate" class="mt-4" style="display: none;">
                             <div class="form-group mb-3">
-                                <label class="text-danger">{{ __('VarenykyForm::labels.field_name') }}</label>
+                                <label for="new_field_name"
+                                    class="@if ($errors->has('new_field_name')) text-danger @endif">{{ __('VarenykyForm::labels.field_name') }}</label>
                                 <input type="text" placeholder="{{ __('VarenykyForm::labels.field_name') }}..."
-                                    name="new_field_name[]" class="form-control">
+                                    name="new_field_name[]" class="form-control @if ($errors->has('new_field_name')) is-invalid @endif">
                             </div>
+                        
                             <div class="form-group mb-3">
-                                <label class="text-danger">{{ __('VarenykyForm::labels.type') }}</label>
-                                <select name="new_type[]" class="form-control">
+                                <label for="new_type"
+                                    class="@if ($errors->has('new_type')) text-danger @endif">{{ __('VarenykyForm::labels.type') }}</label>
+                                <select name="new_type[]" class="form-control @if ($errors->has('new_type')) is-invalid @endif">
                                     <option value="text">Text</option>
                                     <option value="textarea">Textarea</option>
                                     <option value="select">Select</option>
@@ -67,10 +70,12 @@
                                     <option value="recaptcha">reCAPTCHA</option>
                                 </select>
                             </div>
+                        
                             <div class="form-group mb-3">
-                                <label class="text-danger">{{ __('VarenykyForm::labels.sort_order') }}</label>
+                                <label for="new_sort_order"
+                                    class="@if ($errors->has('new_sort_order')) text-danger @endif">{{ __('VarenykyForm::labels.sort_order') }}</label>
                                 <input type="number" placeholder="{{ __('VarenykyForm::labels.sort_order') }}..."
-                                    name="new_sort_order[]" class="form-control" min="0">
+                                    name="new_sort_order[]" class="form-control @if ($errors->has('new_sort_order')) is-invalid @endif" min="0">
                             </div>
                             <hr>
                         </div>
