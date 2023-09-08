@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('form_fields', function (Blueprint $table) {
             $table->id();
+            $table->integer('form_id');
             $table->longText('name');
             $table->longText('slug');
             $table->enum('type',['text','textarea', 'select', 'check', 'recaptcha']);
